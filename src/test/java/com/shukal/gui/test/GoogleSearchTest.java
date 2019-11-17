@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class GoogleSearchTest extends AbstractTest {
-    private static String SEARCH_TERM = "How to learn js";
 
     @Test(description = "Logo, seach input, search btn, im lucky btn are present.")
     public void testGoogleSearchPageEmptyState() {
@@ -22,5 +21,6 @@ public class GoogleSearchTest extends AbstractTest {
         GoogleStartPage googleStartPage = openStartPage();
         SearchResultsPage searchResultsPage = googleStartPage.searchFor(SEARCH_TERM);
         Assert.assertTrue(searchResultsPage.isPageOpened(), "Search results page is not opened!");
+
     }
 }

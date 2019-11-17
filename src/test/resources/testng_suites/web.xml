@@ -5,6 +5,7 @@
     <test name="Google Search Page Test">
         <classes>
             <class name="com.shukal.gui.test.GoogleSearchTest" />
+            <class name="com.shukal.gui.test.SearchResultsTest" />
         </classes>
     </test>
 
