@@ -2,15 +2,14 @@ package com.shukal.gui.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
 import org.testng.asserts.SoftAssert;
 
 import static com.codeborne.selenide.Selenide.$;
 
 public class GoogleStartPage extends AbstractPage {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(GoogleStartPage.class);
+    private static final Logger LOGGER = Logger.getLogger(GoogleStartPage.class);
 
     private SelenideElement logoImg = $(By.id("hplogo"));
     private SelenideElement searchInput = $(By.name("q"));

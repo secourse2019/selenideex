@@ -1,13 +1,12 @@
 package com.shukal.util;
 
 import com.codeborne.selenide.SelenideElement;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 
 public class JSUtil {
-    private static Logger LOGGER = LoggerFactory.getLogger(JSUtil.class);
+    private static Logger LOGGER = Logger.getLogger(JSUtil.class);
 
     public static void hoverWithJS(WebDriver driver, SelenideElement el2hover) {
         String mouseOverScript = "if(document.createEvent){var evObj = document.createEvent('MouseEvents');evObj.initEvent('mouseover', true, false); arguments[0].dispatchEvent(evObj);} else if(document.createEventObject) { arguments[0].fireEvent('onmouseover');}";

@@ -3,9 +3,8 @@ package com.shukal.gui.pages;
 import com.codeborne.selenide.SelenideElement;
 import com.shukal.constant.ConfigContstant;
 import com.shukal.constant.PagesConstant;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testng.asserts.SoftAssert;
 
 import java.util.Arrays;
@@ -17,7 +16,7 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class SearchResultsPage extends AbstractPage {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(SearchResultsPage.class);
+    private static final Logger LOGGER = Logger.getLogger(SearchResultsPage.class);
 
     private SelenideElement resultsCountLabel = $(By.id("resultStats"));
     private SelenideElement searchInput = $(By.name("q"));

@@ -4,9 +4,8 @@ import com.codeborne.selenide.Configuration;
 import com.shukal.constant.ConfigContstant;
 import com.shukal.gui.pages.GoogleStartPage;
 import com.shukal.gui.pages.SearchResultsPage;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 
@@ -15,7 +14,7 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class AbstractTest {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(AbstractTest.class);
+    private static Logger LOGGER = Logger.getLogger(AbstractTest.class);
 
     protected static String SEARCH_TERM = "How to learn js";
 

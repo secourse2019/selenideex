@@ -1,17 +1,16 @@
 package com.shukal.manager;
 
+import org.apache.log4j.Logger;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 public class ContextManager {
     private static volatile ContextManager instance;
-    private static Logger LOGGER = LoggerFactory.getLogger(ContextManager.class);
+    private static Logger LOGGER = Logger.getLogger(ContextManager.class);
 
     private Properties prop = new Properties();
 
