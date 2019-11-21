@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="tests" parallel="methods" thread-count="2">
+<suite name="WEb-Tests selenide" parallel="methods" thread-count="2">
+
+    <listeners>
+        <listener class-name="com.qaprosoft.zafira.listener.ZafiraListener"/>
+    </listeners>
+
+    <parameter name="suiteOwner" value="qpsdemo"/>
+    <parameter name="zafira_project" value="UNKNOWN"/>
+    <parameter name="jenkinsJobName" value="WEB-TEST"/>
+    <parameter name="jenkinsJobCreation" value="true"/>
 
     <test name="Google Search Page Test">
         <classes>

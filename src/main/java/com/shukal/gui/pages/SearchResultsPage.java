@@ -1,7 +1,7 @@
 package com.shukal.gui.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import com.shukal.constant.CommonContstant;
+import com.shukal.constant.ConfigContstant;
 import com.shukal.constant.PagesConstant;
 import org.openqa.selenium.By;
 import org.slf4j.Logger;
@@ -28,7 +28,7 @@ public class SearchResultsPage extends AbstractPage {
         sa.assertTrue(isResultStatsPresent(), "Result stats is not present.");
 
         List<String> expectedSearchTypes = Arrays.asList(PagesConstant.SEARCH_RESULT_TYPES
-                .split(CommonContstant.DOUBLE_COLON_SPLITTER));
+                .split(ConfigContstant.DOUBLE_COLON_SPLITTER));
         List<String> actualSearchTypes = resultTypeTabs.stream().map(type -> type.getText()).collect(Collectors.toList());
         sa.assertEquals(actualSearchTypes, expectedSearchTypes);
     }

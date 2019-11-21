@@ -37,7 +37,7 @@ public class ContextManager {
         String propFileName = System.getProperty("user.dir") + File.separator +
                 "src" + File.separator +
                 "main" + File.separator +
-                "resources" + File.separator + "config.properties";
+                "resources" + File.separator + "_config.properties";
         LOGGER.info("Will read from ".concat(propFileName));
         InputStream inputStream = new FileInputStream(propFileName);
         this.prop.load(inputStream);
