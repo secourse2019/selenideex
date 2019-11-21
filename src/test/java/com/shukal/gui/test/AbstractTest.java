@@ -5,7 +5,6 @@ import com.shukal.constant.ConfigContstant;
 import com.shukal.gui.pages.GoogleStartPage;
 import com.shukal.gui.pages.SearchResultsPage;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -19,15 +18,16 @@ public class AbstractTest {
 
     protected static String SEARCH_TERM = "How to learn js";
 
-    WebDriver webDriver;
+    RemoteWebDriver webDriver;
 
     @BeforeMethod
     public void createDriver() {
         Configuration.baseUrl = ConfigContstant.BASE_URL;
+        Configuration.remote = ConfigContstant.SELENIUM_HOST;
         Configuration.browser = ConfigContstant.BROWSER;
         open("/");
         LOGGER.info("Will maximize the window");
-        webDriver = getWebDriver();
+        webDriver = (RemoteWebDriver) getWebDriver();
         webDriver.manage().window().maximize();
     }
 
